@@ -4,16 +4,16 @@ import { useStaticQuery, graphql } from "gatsby";
 import ProjectBox from "./project-box.component";
 import SectionHeader from "../shared/section-header.component";
 
-
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
+      yggX: file(relativePath: { eq: "yggx.jpg" }) { ...fluidImage }
       lilac: file(relativePath: { eq: "lilac.jpg" }) { ...fluidImage }
       philosocode: file(relativePath: { eq: "philosocode.jpg" }) { ...fluidImage }
     }
   `);
 
-  const { lilac, philosocode } = data;
+  const { lilac, philosocode, yggX } = data;
   const projectsData = [
     {
       title: "Philosocode",
@@ -26,7 +26,13 @@ const Projects = () => {
       imageFluid: lilac.childImageSharp.fluid,
       description: "Simple landing page and writing app. Built for a 48 hour interview take-home project.",
       url: "https://tamxle.com/lilac"
-    }
+    },
+    {
+      title: "Yggdrasil (WIP)",
+      imageFluid: yggX.childImageSharp.fluid,
+      description: "Tool to help students and lifelong learners optimize their studying.",
+      url: "https://yggx.netlify.app"
+    },
   ];
 
   return (

@@ -9,13 +9,14 @@ const Feature = () => {
     query {
       darronTa: file(relativePath: { eq: "darron-ta.jpg" }) { ...fluidImage }
       kachingu: file(relativePath: { eq: "ka-chingu.jpg" }) { ...fluidImage }
-      threeTakesOrLess: file(relativePath: { eq: "3tl.jpg" }) { ...fluidImage }
+      minima: file(relativePath: { eq: "minima.jpg" }) { ...fluidImage }
       politik: file(relativePath: { eq: "politik.jpg" }) { ...fluidImage }
+      threeTakesOrLess: file(relativePath: { eq: "3tl.jpg" }) { ...fluidImage }
       zephyr: file(relativePath: { eq: "zephyr.jpg" }) { ...fluidImage }
     }
   `);
 
-  const { darronTa, kachingu, threeTakesOrLess, politik, zephyr } = data;
+  const { darronTa, kachingu, minima, politik, threeTakesOrLess, zephyr } = data;
   const projectsData = [
     {
       title: "3 Takes or Less",
@@ -25,11 +26,25 @@ const Feature = () => {
       technologies: ["React", "Gatsby"]
     },
     {
+      title: "minima (WIP)",
+      imageFluid: minima.childImageSharp.fluid,
+      description: "Minimal, personal front-end web app for YouTube. Users can save their liked videos, channels, and playlists.",
+      url: "https://minima.netlify.app",
+      technologies: ["React", "Redux", "Firestore"]
+    },
+    {
       title: "KA-Chingu",
       imageFluid: kachingu.childImageSharp.fluid,
       description: "Basic full-stack web app for tracking income and expenses. Built with other team members for chingu.io voyage 8.",
       url: "https://ka-chingu.herokuapp.com",
       technologies: ["React", "Redux", "Express", "PostgreSQL"]
+    },
+    {
+      title: "Zephyr",
+      imageFluid: zephyr.childImageSharp.fluid,
+      description: "First iteration of my personal website.",
+      url: "https://tamxle.com",
+      technologies: ["HTML", "SCSS", "JavaScript"]
     },
     {
       title: "Darron Ta: Stunt Portfolio",
@@ -44,13 +59,6 @@ const Feature = () => {
       description: "Website for Politik™, a social organization.",
       url: "https://politik.ca",
       technologies: ["HTML", "SCSS", "WordPress"]
-    },
-    {
-      title: "Zephyr",
-      imageFluid: zephyr.childImageSharp.fluid,
-      description: "First iteration of my personal website.",
-      url: "https://tamxle.com",
-      technologies: ["HTML", "SCSS", "JavaScript"]
     },
   ];
 
