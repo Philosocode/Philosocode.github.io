@@ -2,11 +2,11 @@ import React from "react";
 import BlockReveal from "../shared/block-reveal.component";
 
 const AboutCardLeft = () => {
-  const description = `I'm Tam, a developer who is driven to create beautiful, usable products that please the eye and delight the user.
+  const description = `I’m Tam, a full-stack web developer based in Alberta, Canada.
 
-  My knowledge of full-stack development, meticulous attention to detail, and focus on best practices enable me to build clean, scalable, and performant applications.
-
-  Currently, I'm working towards a BS. Computer Science with a minor in Mathematics.`;
+  On the front-end, you’ll find me sketching out wireframes, working on mockups, or crafting usable, interactive interfaces and websites. On the back-end, you’ll find me designing APIs, tinkering with databases, or setting up web servers.
+  
+  I’ve had the opportunity to work with some amazing individuals and startups to build awesome websites. I hope we’ll get the chance to work together and create something great!`;
 
   return (
       <div className="c-about__card c-about__card--left">

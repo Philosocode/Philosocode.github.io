@@ -15,10 +15,10 @@ const AboutCardRight = () => {
   const tools = [
     "React",
     "Redux",
+    "Gatsby",
     "Node.js",
     "Express",
-    "WordPress",
-    "Firebase",
+    "WordPress"
   ];
 
   return (

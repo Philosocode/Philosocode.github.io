@@ -56,7 +56,7 @@
 
   &__grid {
     display: flex;
-      justify-content: start;
+      justify-content: flex-start;
   }
 
   &__column:last-of-type {
