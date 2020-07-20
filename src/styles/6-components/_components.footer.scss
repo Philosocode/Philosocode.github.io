@@ -1,0 +1,24 @@
+.c-footer {
+  background-color: $color-black;
+  padding: $spacing-medium $side-gap;
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+  &__copyright {
+    color: $color-grey-dark;
+    font-family: $font-secondary;
+  }
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+  }
+
+  &__icon {
+    margin-left: $spacing-medium;
+
+    @include respond(tab-port) { margin-left: $spacing-large; }
+  }
+}

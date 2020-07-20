@@ -1,0 +1,24 @@
+.o-grid {
+  display: grid;
+    grid-template-columns: 
+      [full-start] 5%
+      [wide-start] 15%
+      [center-start] 15%
+      [narrow-start] 1fr 
+      [narrow-end] 15%
+      [center-end] 15% 
+      [wide-end] 5%
+      [full-end];
+}
+
+.o-grid__item {
+  grid-column: full-start / full-end;
+
+  &--full { grid-column: full-start / full-end; }
+  &--wide { grid-column: wide-start / wide-end;}
+
+  @include respond(tab-port) {
+    &--center { grid-column: center-start / center-end; }
+    &--narrow { grid-column: narrow-start / narrow-end; }
+  }
+}

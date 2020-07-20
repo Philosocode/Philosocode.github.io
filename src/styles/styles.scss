@@ -1,0 +1,51 @@
+// 1. Settings
+@import "1-settings/settings.colors";
+@import "1-settings/settings.box-shadows";
+@import "1-settings/settings.global";
+@import "1-settings/settings.gradients";
+@import "1-settings/settings.typography";
+@import "1-settings/settings.spacing";
+
+// 2. Tools
+@import "2-tools/tools.animations";
+@import "2-tools/tools.respond";
+
+// 3. Generics
+@import "3-generics/generics.box-sizing";
+@import "3-generics/generics.reset";
+@import "3-generics/generics.root";
+@import "3-generics/generics.selection";
+
+// 4. Elements
+@import "4-elements/elements.body";
+@import "4-elements/elements.headings";
+@import "4-elements/elements.html";
+
+// 5. Objects
+@import "5-objects/objects.grid";
+@import "5-objects/objects.section";
+
+// 6. Components
+@import "6-components/components.social";
+
+@import "6-components/components.about";
+@import "6-components/components.block-reveal";
+@import "6-components/components.body-text";
+@import "6-components/components.burger";
+@import "6-components/components.button";
+@import "6-components/components.contact";
+@import "6-components/components.feature";
+@import "6-components/components.footer";
+@import "6-components/components.form";
+@import "6-components/components.header";
+@import "6-components/components.heading";
+@import "6-components/components.hero";
+@import "6-components/components.loader";
+@import "6-components/components.menu";
+@import "6-components/components.process";
+@import "6-components/components.project";
+@import "6-components/components.section";
+@import "6-components/components.testimonial";
+@import "6-components/components.why";
+
+// 7. Trumps

@@ -1,0 +1,139 @@
+.c-process {
+  &__content {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+    grid-column: wide-start / wide-end;
+    text-align: center;
+
+    @include respond(tab-land) { grid-column: center-start / center-end; }
+  }
+
+  &__tabs {
+    display: grid;
+      grid-template-columns: repeat(3, 9rem);
+    position: relative;
+    margin-top: $spacing-medium;
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(3, 10rem);
+      margin-top: $spacing-largest;
+    }
+  }
+
+  &__tab {
+    border: none;
+    background-color: transparent;
+    color: $color-grey-dark;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: $font-size-small;
+    letter-spacing: 1px;
+    padding-top: $spacing-smallest;
+    padding-bottom: $spacing-smallest;
+    transition: background-color $transition-append, color $transition-append;
+
+    @include respond(tab-port) { font-size: $font-size-normal; }
+
+    &:hover, &.is-current {
+      background-color: rgba(var(--color-lighter-rgb), 0.2);
+      color: var(--color);
+    }
+
+    &:active, &:focus { outline: 1px solid rgba(var(--color-lighter-rgb), 0.3)}
+  }
+
+  &__bar {
+    background-color: $color-grey-darkest;
+    height: 3px; width: 100%;
+    grid-column: 1 / -1;
+    margin: 0 auto;
+  }
+
+  &__highlight {
+    background-color: var(--color-light);
+    background: var(--gradient-alt);
+
+    height: 3px; width: 100%;
+    position: absolute;
+      bottom: 0;
+    transition: transform $transition-append;
+    transition-delay: 100ms;
+    grid-column: 1 / 2;
+
+    &.is-first { transform: translateX(0); }
+    &.is-second { transform: translateX(100%); }
+    &.is-third { transform: translateX(200%); }
+  }
+
+  &__card {
+    background-color: $color-off-black;
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+    margin: 0 auto;
+    padding: $spacing-large $spacing-medium;
+    text-align: center;
+    max-width: 72rem;
+
+    @include respond(tab-port) {
+      flex-direction: row;
+      margin-top: $spacing-large; 
+      text-align: left;
+    }
+
+    &:first-of-type {
+      @include respond(phone-only) {
+        border-bottom: 1px solid $color-grey-darkest;
+        margin-top: $spacing-medium;
+      }
+    }
+
+    &.is-right {
+      @include respond(tab-port) {
+        text-align: right;
+  
+        .c-process__icon-container {
+          margin-right: 0;
+          margin-left: $spacing-medium;
+        }
+  
+        .c-process__icon { transform: rotateY(180deg); }
+        .c-process__text { order: -1; } // Move the text to the left of the icon
+      }      
+    }
+  }
+
+  &__icon-container {
+    background-color: rgba($color-grey-darkest, 0.5);
+    padding: $spacing-medium;
+
+    @include respond(tab-port) { margin-right: $spacing-medium; padding: $spacing-large; }
+  }
+
+  &__icon {
+    color: var(--color-faded);
+    font-size: 5rem;
+  }
+
+  &__step {
+    color: $color-grey;
+    @include respond(phone-only) { margin-top: $spacing-medium; }
+  }
+
+  &__title {
+    color: $color-grey-lighter;
+    margin-top: 2px;
+  }
+
+  &__description {
+    color: $color-grey-light;    
+    margin-top: 5px;
+
+    @include respond(phone-only) {
+      margin-left: auto;
+      margin-right: auto;
+      width: 85%; max-width: 25rem;
+    }
+  }
+}

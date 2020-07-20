@@ -1,0 +1,87 @@
+.c-menu {
+  $menu-animation: moveInLeft 0.5s ease-in-out both;
+
+  &__background {
+    background-color: $color-black;
+    height: 100%;
+    width: 0%;
+    z-index: 1500;
+
+    position: fixed;
+      top: 0;
+      left: 0;
+
+    transition: background-color $transition-append, width 0.5s $delayed-bezier;
+
+    &.is-open {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  &__nav {
+    opacity: 0;
+    transition: all $transition-append;
+    visibility: hidden;
+    width: 100%;
+    z-index: 2000;
+
+    position: fixed;
+      left: 0;
+      top: 11%;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__list {
+    position: fixed;
+      left: 5%;
+      bottom: 3%;
+    margin-left: 0;
+    width: 90%;
+    text-align: left;
+  }
+
+  &__item {
+    font-family: $font-primary;
+    font-size: $font-size-large;
+    font-weight: 500;
+    margin-top: $spacing-small;
+    margin-bottom: $spacing-small;
+    text-transform: uppercase;
+    list-style-type: none;
+    width: max-content;
+
+    &:last-of-type { margin-bottom: 0; }
+  }
+
+  &__divider {
+    background-color: $color-grey-dark;
+    height: 1px;
+    margin: $spacing-medium auto;
+    width: 100%;
+
+    &.is-animated { animation: moveInBottom 0.5s ease-in-out both; }
+  }
+
+  &__link {
+    color: $color-grey-lightest;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    transition: transform $transition-append;
+
+    &.is-animated {
+      animation: moveInLeft 0.5s ease-in-out both;
+    }
+
+    &:hover { color: var(--color-light); }
+  }
+
+  &__icon {
+    margin-right: $spacing-medium;
+  }
+}

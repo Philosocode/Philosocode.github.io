@@ -1,0 +1,26 @@
+.c-heading {
+  font-family: $font-primary;
+  text-decoration: none;
+
+  // General Styles
+  &--condensed {
+    font-size: $font-size-smallest;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    @include respond(tab-port) { font-size: $font-size-smaller; }
+    @include respond(tab-land) { font-size: $font-size-small; }
+  }
+
+  &--section {
+    font-size: $font-size-mega;
+  }
+
+  // 1-Liners
+  &--centered { text-align: center; }
+  &--white { color: $color-off-white; }
+  &--light { color: $color-grey-lightest; }
+  &--red { color: var(--color); }
+  &--smaller { font-size: $font-size-smaller; }
+}
