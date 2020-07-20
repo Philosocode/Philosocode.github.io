@@ -12,7 +12,7 @@
     border-radius: 1px;
     width: 100%; max-width: 40rem;
 
-    @include respond(tab-land) { height: 60rem; width: 50%; }
+    @include respond(tab-land) { height: 77rem; width: 50%; }
 
     @include respond(desktop) {
       height: auto;
@@ -44,7 +44,7 @@
 
   &__left-content,
   &__right-content {
-    padding: $spacing-medium;
+    padding: $spacing-large $spacing-medium;
 
     @include respond(tab-port) { padding: $spacing-large; }
     @include respond(tab-land) { padding: $spacing-larger; }
