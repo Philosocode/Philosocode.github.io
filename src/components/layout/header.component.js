@@ -10,7 +10,6 @@ import BlazeLogo from "../../icons/blaze.svg";
 import ZephyrLogo from "../../icons/zephyr.svg";
 import NavMobile from "./nav-mobile.component";
 import NavList from "./nav-list.component";
-import ScrollLock from "react-scrolllock";
 
 const Header = () => {
   const { isDark } = useContext(HeaderContext);
@@ -71,7 +70,7 @@ const Header = () => {
   function handleClick() {
     setPageAnimating(true);
     setTimeout(() => toggleTheme(), 500);
-    setTimeout(() => setPageAnimating(false), 2500);
+    setTimeout(() => setPageAnimating(false), 2000);
   }
 
   return (
@@ -92,7 +91,6 @@ const Header = () => {
         }
       </header>
       <div className={pageClasses}></div>
-      <ScrollLock isActive={pageAnimating} />
     </>
   );
  }
