@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 
 import Layout from "../components/layout/layout.component";
-import SEO from "../components/shared/seo.component";
 import Hero from "../components/hero/hero.component";
 import About from "../components/about/about.component";
 import Process from "../components/process/process.component";
@@ -21,7 +20,6 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
       <Hero />
       <About />
       <Process />

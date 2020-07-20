@@ -4,7 +4,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import Header from "./header.component";
@@ -13,6 +13,7 @@ import Loader from "../shared/loader.component";
 import { ThemeContext } from "../../contexts/theme.context";
 import BlazeLogo from "../../icons/blaze.svg";
 import ZephyrLogo from "../../icons/zephyr.svg";
+import Head from "./head.component";
 
 const Layout = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,14 +26,22 @@ const Layout = ({ children }) => {
     ? <BlazeLogo className="c-loader__icon" />
     : <ZephyrLogo className="c-loader__icon c-loader__icon--zephyr" />
 
+  function renderSiteContent() {
+    if (isLoading) return <Loader Logo={Logo} finishLoading={() => setIsLoading(false)} />;
 
-  if (isLoading) return <Loader Logo={Logo} finishLoading={() => setIsLoading(false)} />
+    return (
+      <>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </>
+    )
+  }
 
   return (
     <>
-      <Header />
-      <main>{children}</main>
-      <Footer />
+      <Head />
+      { renderSiteContent() }
     </>
   );
 };
