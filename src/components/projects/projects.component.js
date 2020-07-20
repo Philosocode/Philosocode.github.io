@@ -16,6 +16,12 @@ const Projects = () => {
   const { lilac, philosocode, yggX } = data;
   const projectsData = [
     {
+      title: "Yggdrasil (WIP)",
+      imageFluid: yggX.childImageSharp.fluid,
+      description: "Tool to help students and lifelong learners optimize their studying.",
+      url: "https://yggx.netlify.app"
+    },
+    {
       title: "Philosocode",
       imageFluid: philosocode.childImageSharp.fluid,
       description: "Programming blog where I post computer science & web development tutorials.",
@@ -26,12 +32,6 @@ const Projects = () => {
       imageFluid: lilac.childImageSharp.fluid,
       description: "Simple landing page and writing app. Built for a 48 hour interview take-home project.",
       url: "https://tamxle.com/lilac"
-    },
-    {
-      title: "Yggdrasil (WIP)",
-      imageFluid: yggX.childImageSharp.fluid,
-      description: "Tool to help students and lifelong learners optimize their studying.",
-      url: "https://yggx.netlify.app"
     },
   ];
 

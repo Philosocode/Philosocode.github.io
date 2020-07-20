@@ -22,7 +22,8 @@
     display: flex;
       align-items: center;
     height: 25rem;
-    margin-top: $spacing-medium;
+    max-width: 40rem;
+    margin-top: $spacing-large;
     overflow: hidden;
     position: relative;
     text-align: center;
