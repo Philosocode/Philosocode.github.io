@@ -43,7 +43,7 @@ const Feature = () => {
       title: "Zephyr",
       imageFluid: zephyr.childImageSharp.fluid,
       description: "First iteration of my personal website.",
-      url: "https://tamxle.com",
+      url: "https://tamxle.com/zephyr",
       technologies: ["HTML", "SCSS", "JavaScript"]
     },
     {
