@@ -28,7 +28,7 @@ const Feature = () => {
     {
       title: "minima (WIP)",
       imageFluid: minima.childImageSharp.fluid,
-      description: "Minimal, personal front-end web app built using the YouTube V3 Data API. Users can save their liked videos, channels, and playlists.",
+      description: "Minimal, personal front-end web app built using the YouTube Data API. Users can save videos, channels, and playlists.",
       url: "https://minima.netlify.app",
       technologies: ["React", "Redux", "Firestore"]
     },

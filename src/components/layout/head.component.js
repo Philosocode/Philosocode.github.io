@@ -30,7 +30,7 @@ const Head = () => {
   return (
     <Helmet defer={false}>
       <html lang="en" prefix="og: http://ogp.me/ns#" />
-      <title itemProp="name" lang="en">{title}</title>
+      <title lang="en">{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />

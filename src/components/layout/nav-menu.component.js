@@ -30,13 +30,13 @@ export const NavMenu = ({ menuOpen, toggleMenu }) => {
   });
 
   return (
-    <div className="c-menu__container">
+    <div className="c-menu__container" onClick={toggleMenu} onKeyPress={toggleMenu} role="menu" tabIndex={0}>
       <div className={menuBackgroundClasses}>&nbsp;</div>
       <nav className={menuNavClasses}>
         <ul className="c-menu__list">
           {
             navLinks.map((link, idx) => (
-              <li key={link.name} className="c-menu__item" onClick={toggleMenu}>
+              <li key={link.name} className="c-menu__item">
                 <Link
                   to={`${link.path}`}
                   className={menuLinkClasses}

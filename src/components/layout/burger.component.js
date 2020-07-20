@@ -17,7 +17,9 @@ export const Burger = ({ menuOpen, toggleMenu }) => {
     <div
       className={containerClasses}
       onClick={toggleMenu}
+      onKeyPress={toggleMenu}
       role="button"
+      tabIndex={-1}
     >
       <div className="c-burger__line"></div>
     </div>
