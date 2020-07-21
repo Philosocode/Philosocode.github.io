@@ -33,7 +33,7 @@ const Process = () => {
       },
       {
         title: "Brief Chat", icon: FaComments,
-        description: "Once the brief is created, we'll have a quick call to introduce ourselves. We'll go over the brief and make sure we're on the same page about what needs to be done by when."
+        description: "Once the requirements are defined, we'll have a quick call to introduce ourselves. We'll go over the document and make sure we're on the same page about what needs to be done."
       },
       {
         title: "Wireframes", icon: FaTh,
@@ -41,15 +41,15 @@ const Process = () => {
       },
       {
         title: "Design", icon: FaMagic,
-        description: "The next step is to apply a little design magic to bring the wireframes to life. We'll add colour, images, and typography to create a visual mockup of the site."
+        description: "Next, we'll apply some design magic and bring the wireframes to life using colour, images, and typography. We'll create a visual mockup of what the final site will generally look like."
       },
       {
         title: "Code", icon: FaCode,
-        description: `With the visuals done, it's time to start programming. I'll transform the mockup into a website that you can interact with.`
+        description: `With the visuals done, it's time to start programming. This is where I take the mockup and transform it into an interactive website that lives on the web.`
       },
       {
         title: "Launch", icon: FaRocket,
-        description: "When the site is fully created, there's only one thing left to do: launch it! Sit back and relax as I handle all the details. I'll also teach you how to use your new site."
+        description: "With the site created, there's only one thing left to do: launch it! I'll teach you how to use your awesome new site. You can sit back and relax as I handle all the heavy lifting."
       },
     ];
 
