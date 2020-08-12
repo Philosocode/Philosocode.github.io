@@ -10,11 +10,18 @@ const Projects = () => {
       yggX: file(relativePath: { eq: "yggx.jpg" }) { ...fluidImage }
       lilac: file(relativePath: { eq: "lilac.jpg" }) { ...fluidImage }
       philosocode: file(relativePath: { eq: "philosocode.jpg" }) { ...fluidImage }
+      fraser: file(relativePath: { eq: "fraser.jpg" }) { ...fluidImage }
     }
   `);
 
-  const { lilac, philosocode, yggX } = data;
+  const { lilac, philosocode, fraser, yggX } = data;
   const projectsData = [
+    {
+      title: "Child Care Center Site",
+      imageFluid: fraser.childImageSharp.fluid,
+      description: "Website for Fraser Community Child Care Center & Out of School Care. Built using Gatsby & Contentful CMS.",
+      url: "https://frasercommunitychildcarecenter.com"
+    },
     {
       title: "Yggdrasil (WIP)",
       imageFluid: yggX.childImageSharp.fluid,
