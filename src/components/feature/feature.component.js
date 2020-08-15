@@ -18,13 +18,13 @@ const Feature = () => {
 
   const { darronTa, kachingu, minima, politik, threeTakesOrLess, zephyr } = data;
   const projectsData = [
-    {
-      title: "minima (WIP)",
-      imageFluid: minima.childImageSharp.fluid,
-      description: "Minimal, personal front-end web app built using the YouTube Data API. Users can save videos, channels, and playlists.",
-      url: "https://minima.netlify.app",
-      technologies: ["React", "Redux", "Firestore"]
-    },
+    // {
+    //   title: "minima (WIP)",
+    //   imageFluid: minima.childImageSharp.fluid,
+    //   description: "Minimal, personal front-end web app built using the YouTube Data API. Users can save videos, channels, and playlists.",
+    //   url: "https://minima.netlify.app",
+    //   technologies: ["React", "Redux", "Firestore"]
+    // },
     {
       title: "3 Takes or Less",
       imageFluid: threeTakesOrLess.childImageSharp.fluid,

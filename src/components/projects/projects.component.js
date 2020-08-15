@@ -7,20 +7,34 @@ import SectionHeader from "../shared/section-header.component";
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      yggX: file(relativePath: { eq: "yggx.jpg" }) { ...fluidImage }
+      auetchiu: file(relativePath: { eq: "auetchiu.jpg" }) { ...fluidImage }
+      interzone: file(relativePath: { eq: "interzone.jpg" }) { ...fluidImage }
+      fraser: file(relativePath: { eq: "fraser.jpg" }) { ...fluidImage }
       lilac: file(relativePath: { eq: "lilac.jpg" }) { ...fluidImage }
       philosocode: file(relativePath: { eq: "philosocode.jpg" }) { ...fluidImage }
-      fraser: file(relativePath: { eq: "fraser.jpg" }) { ...fluidImage }
+      yggX: file(relativePath: { eq: "yggx.jpg" }) { ...fluidImage }
     }
   `);
 
-  const { lilac, philosocode, fraser, yggX } = data;
+  const { auetchiu, fraser, interzone, lilac, philosocode, yggX } = data;
   const projectsData = [
+    {
+      title: "auetchiu.com",
+      imageFluid: auetchiu.childImageSharp.fluid,
+      description: "Website for local import export company. Built using Gatsby & Contentful CMS.",
+      url: "https://auetchiu.com"
+    },
     {
       title: "Child Care Center Site",
       imageFluid: fraser.childImageSharp.fluid,
       description: "Website for Fraser Community Child Care Center & Out of School Care. Built using Gatsby & Contentful CMS.",
       url: "https://frasercommunitychildcarecenter.com"
+    },
+    {
+      title: "Interzone™ Event",
+      imageFluid: interzone.childImageSharp.fluid,
+      description: "Website for upcoming event hosted by Politik™. Built using WordPress.",
+      url: "https://interzone.politik.ca"
     },
     {
       title: "Yggdrasil (WIP)",
