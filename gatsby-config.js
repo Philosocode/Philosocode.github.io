@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Tam Le | Full-Stack Developer`,
+    title: `Tam Le | Web Developer`,
     description: `Tam Le, web developer based in Alberta, Canada with a passion for design, development, and teaching.`,
     siteUrl: "https://tamxle.com",
     keywords: "Tam Le, Tam, Le, philosocode, web developer, full-stack developer, software engineer, software developer, javascript, react, nodejs",
