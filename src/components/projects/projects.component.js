@@ -53,7 +53,7 @@ const Projects = () => {
       title: "Philosocode",
       imageFluid: philosocode.childImageSharp.fluid,
       description: "Programming blog where I post computer science & web development tutorials.",
-      url: "https://philosocode.com"
+      url: "https://philosocode.netlify.app"
     },
     {
       title: "Lilac",
