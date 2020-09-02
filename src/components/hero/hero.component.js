@@ -38,7 +38,7 @@ const Hero = () => {
             className="c-hero__title"
             style={{ animationDelay: `${delays[0]}ms` }}
           >Tam Le</h1>
-          <h2 className="c-hero__subtitle" style={{ animationDelay: `${delays[1]}ms` }}>Full-Stack Developer</h2>
+          <h2 className="c-hero__subtitle" style={{ animationDelay: `${delays[1]}ms` }}>Web Developer</h2>
           <p className="c-body-text c-hero__description" style={{ animationDelay: `${delays[2]}ms` }}>{
             "You have an idea. A vision for a product.\nI can help you build it.\nLet's work together and make it a reality."
           }</p>

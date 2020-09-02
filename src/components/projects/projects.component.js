@@ -8,6 +8,7 @@ const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
       auetchiu: file(relativePath: { eq: "auetchiu.jpg" }) { ...fluidImage }
+      bakboardz: file(relativePath: { eq: "bakboardz.jpg" }) { ...fluidImage }
       interzone: file(relativePath: { eq: "interzone.jpg" }) { ...fluidImage }
       fraser: file(relativePath: { eq: "fraser.jpg" }) { ...fluidImage }
       lilac: file(relativePath: { eq: "lilac.jpg" }) { ...fluidImage }
@@ -16,13 +17,19 @@ const Projects = () => {
     }
   `);
 
-  const { auetchiu, fraser, interzone, lilac, philosocode, yggX } = data;
+  const { auetchiu, bakboardz, fraser, interzone, lilac, philosocode, yggX } = data;
   const projectsData = [
     {
       title: "auetchiu.com",
       imageFluid: auetchiu.childImageSharp.fluid,
       description: "Website for local import export company. Built using Gatsby & Contentful CMS.",
       url: "https://auetchiu.com"
+    },
+    {
+      title: "Bakboardz.ca",
+      imageFluid: bakboardz.childImageSharp.fluid,
+      description: "Website for local company specializing in basketball backboard services. Built using Gatsby, Tailwind CSS, & Contentful CMS.",
+      url: "https://bakboardz.ca"
     },
     {
       title: "Child Care Center Site",
