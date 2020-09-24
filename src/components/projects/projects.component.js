@@ -23,7 +23,7 @@ const Projects = () => {
       title: "auetchiu.com",
       imageFluid: auetchiu.childImageSharp.fluid,
       description: "Website for local import export company. Built using Gatsby & Contentful CMS.",
-      url: "https://auetchiu.com"
+      url: "https://auetchiu.netlify.app"
     },
     {
       title: "Bakboardz.ca",
