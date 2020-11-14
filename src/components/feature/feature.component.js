@@ -7,6 +7,7 @@ import FeatureProject from "./feature-project.component";
 const Feature = () => { 
   const data = useStaticQuery(graphql`
     query {
+      cryptoB: file(relativePath: { eq: "cryptob.jpg" }) { ...fluidImage }
       darronTa: file(relativePath: { eq: "darron-ta.jpg" }) { ...fluidImage }
       kachingu: file(relativePath: { eq: "ka-chingu.jpg" }) { ...fluidImage }
       minima: file(relativePath: { eq: "minima.jpg" }) { ...fluidImage }
@@ -16,7 +17,7 @@ const Feature = () => {
     }
   `);
 
-  const { darronTa, kachingu, minima, politik, threeTakesOrLess, zephyr } = data;
+  const { cryptoB, darronTa, kachingu, minima, politik, threeTakesOrLess, zephyr } = data;
   const projectsData = [
     {
       title: "minima (WIP)",
@@ -31,6 +32,13 @@ const Feature = () => {
       description: "Website for up-and-coming stunt team based in Edmonton.",
       url: "https://3takesorless.com",
       technologies: ["React", "Gatsby"]
+    },
+    {
+      title: "Crypto B Vision",
+      imageFluid: cryptoB.childImageSharp.fluid,
+      description: "Website that provides information about investing in cryptocurrency. Built using WordPress and Oxygen Builder.",
+      url: "https://cryptob.philosocode.com",
+      technologies: ["WordPress", "Oxygen Builder"]
     },
     {
       title: "KA-Chingu",
