@@ -8,7 +8,6 @@ const Feature = () => {
   const data = useStaticQuery(graphql`
     query {
       cryptoB: file(relativePath: { eq: "cryptob.jpg" }) { ...fluidImage }
-      darronTa: file(relativePath: { eq: "darron-ta.jpg" }) { ...fluidImage }
       kachingu: file(relativePath: { eq: "ka-chingu.jpg" }) { ...fluidImage }
       minima: file(relativePath: { eq: "minima.jpg" }) { ...fluidImage }
       politik: file(relativePath: { eq: "politik.jpg" }) { ...fluidImage }
@@ -17,7 +16,7 @@ const Feature = () => {
     }
   `);
 
-  const { cryptoB, darronTa, kachingu, minima, politik, threeTakesOrLess, zephyr } = data;
+  const { cryptoB, kachingu, minima, politik, threeTakesOrLess, zephyr } = data;
   const projectsData = [
     {
       title: "minima (WIP)",
@@ -37,7 +36,7 @@ const Feature = () => {
       title: "Crypto B Vision",
       imageFluid: cryptoB.childImageSharp.fluid,
       description: "Website that provides information about investing in cryptocurrency. Built using WordPress and Oxygen Builder.",
-      url: "https://cryptob.philosocode.com",
+      url: "https://cryptobvision.com",
       technologies: ["WordPress", "Oxygen Builder"]
     },
     {
@@ -53,13 +52,6 @@ const Feature = () => {
       description: "First iteration of my personal website.",
       url: "https://tamxle.com/zephyr",
       technologies: ["HTML", "SCSS", "JavaScript"]
-    },
-    {
-      title: "Darron Ta: Stunt Portfolio",
-      imageFluid: darronTa.childImageSharp.fluid,
-      description: "Portfolio site for martial artist and stunt actor.",
-      url: "https://darronta.com",
-      technologies: ["React", "Gatsby"]
     },
     {
       title: "Politik™",
