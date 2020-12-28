@@ -37,7 +37,7 @@ const Feature = () => {
       title: "Karai「花蕾」",
       imageFluid: karai.childImageSharp.fluid,
       description: "Web app for studying. Encourages effective studying through metacognitive prompts.",
-      url: "https://tamxle.com/karai",
+      url: "https://karai.netlify.app",
       technologies: ["Vue"]
     },
     {
