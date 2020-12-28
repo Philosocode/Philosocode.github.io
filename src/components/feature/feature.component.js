@@ -9,6 +9,7 @@ const Feature = () => {
     query {
       cryptoB: file(relativePath: { eq: "cryptob.jpg" }) { ...fluidImage }
       kachingu: file(relativePath: { eq: "ka-chingu.jpg" }) { ...fluidImage }
+      karai: file(relativePath: { eq: "karai.jpg" }) { ...fluidImage }
       minima: file(relativePath: { eq: "minima.jpg" }) { ...fluidImage }
       politik: file(relativePath: { eq: "politik.jpg" }) { ...fluidImage }
       threeTakesOrLess: file(relativePath: { eq: "3tl.jpg" }) { ...fluidImage }
@@ -16,7 +17,7 @@ const Feature = () => {
     }
   `);
 
-  const { cryptoB, kachingu, minima, politik, threeTakesOrLess, zephyr } = data;
+  const { cryptoB, kachingu, karai, minima, politik, threeTakesOrLess, zephyr } = data;
   const projectsData = [
     {
       title: "minima (WIP)",
@@ -31,6 +32,13 @@ const Feature = () => {
       description: "Website for up-and-coming stunt team based in Edmonton.",
       url: "https://3takesorless.com",
       technologies: ["React", "Gatsby"]
+    },
+    {
+      title: "Karai「花蕾」",
+      imageFluid: karai.childImageSharp.fluid,
+      description: "Web app for studying. Encourages effective studying through metacognitive prompts.",
+      url: "https://tamxle.com/karai",
+      technologies: ["Vue"]
     },
     {
       title: "Crypto B Vision",

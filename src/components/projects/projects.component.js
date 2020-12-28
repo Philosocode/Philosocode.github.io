@@ -43,12 +43,12 @@ const Projects = () => {
       description: "Website for upcoming event hosted by Politik™. Built using WordPress.",
       url: "https://interzone.politik.ca"
     },
-    // {
-    //   title: "Yggdrasil (WIP)",
-    //   imageFluid: yggX.childImageSharp.fluid,
-    //   description: "Tool to help students and lifelong learners optimize their studying.",
-    //   url: "https://yggx.netlify.app"
-    // },
+    {
+      title: "Yggdrasil (WIP)",
+      imageFluid: yggX.childImageSharp.fluid,
+      description: "Tool to help students and lifelong learners optimize their studying.",
+      url: "https://yggx.netlify.app"
+    },
     {
       title: "Philosocode",
       imageFluid: philosocode.childImageSharp.fluid,
