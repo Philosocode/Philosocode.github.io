@@ -35,7 +35,7 @@ const Testimonials = () => {
           />
           <TestimonialCard
             person="Darron Ta"
-            position="Martial Artist and Stunt Performer"
+            position="Director & Co-Founder at 3 Takes or Less*"
             text={darronText}
           />
         </Carousel>
