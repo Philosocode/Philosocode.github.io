@@ -44,7 +44,7 @@ const Projects = () => {
       url: "https://interzone.politik.ca"
     },
     {
-      title: "Yggdrasil (WIP)",
+      title: "Yggdrasil Prototype",
       imageFluid: yggX.childImageSharp.fluid,
       description: "Tool to help students and lifelong learners optimize their studying.",
       url: "https://yggx.netlify.app"

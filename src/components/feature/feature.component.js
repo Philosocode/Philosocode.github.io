@@ -13,12 +13,20 @@ const Feature = () => {
       minima: file(relativePath: { eq: "minima.jpg" }) { ...fluidImage }
       politik: file(relativePath: { eq: "politik.jpg" }) { ...fluidImage }
       threeTakesOrLess: file(relativePath: { eq: "3tl.jpg" }) { ...fluidImage }
+      yggdrasil: file(relativePath: { eq: "yggdrasil.jpg" }) { ...fluidImage }
       zephyr: file(relativePath: { eq: "zephyr.jpg" }) { ...fluidImage }
     }
   `);
 
-  const { cryptoB, kachingu, karai, minima, politik, threeTakesOrLess, zephyr } = data;
+  const { cryptoB, kachingu, karai, minima, politik, threeTakesOrLess, yggdrasil, zephyr } = data;
   const projectsData = [
+    {
+      title: "Yggdrasil (WIP)",
+      imageFluid: yggdrasil.childImageSharp.fluid,
+      description: "Full-stack web app to help learners study better. Core features: notes, flashcards, concepts, Pomodoro timer.",
+      url: "https://yggapp.com",
+      technologies: ["React", "Express", "Postgres", "Docker"]
+    },
     {
       title: "minima (WIP)",
       imageFluid: minima.childImageSharp.fluid,
@@ -52,7 +60,7 @@ const Feature = () => {
       imageFluid: kachingu.childImageSharp.fluid,
       description: "Basic full-stack web app for tracking income and expenses. Built with other team members for chingu.io voyage 8.",
       url: "https://ka-chingu.herokuapp.com",
-      technologies: ["React", "Redux", "Express", "PostgreSQL"]
+      technologies: ["React", "Redux", "Express", "Postgres"]
     },
     {
       title: "Zephyr",
