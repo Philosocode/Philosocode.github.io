@@ -4,77 +4,83 @@ import { useStaticQuery, graphql } from "gatsby";
 import SectionHeader from "../shared/section-header.component";
 import FeatureProject from "./feature-project.component";
 
-const Feature = () => { 
+const Feature = () => {
   const data = useStaticQuery(graphql`
     query {
-      cryptoB: file(relativePath: { eq: "cryptob.jpg" }) { ...fluidImage }
-      kachingu: file(relativePath: { eq: "ka-chingu.jpg" }) { ...fluidImage }
-      karai: file(relativePath: { eq: "karai.jpg" }) { ...fluidImage }
-      minima: file(relativePath: { eq: "minima.jpg" }) { ...fluidImage }
-      politik: file(relativePath: { eq: "politik.jpg" }) { ...fluidImage }
-      threeTakesOrLess: file(relativePath: { eq: "3tl.jpg" }) { ...fluidImage }
-      yggdrasil: file(relativePath: { eq: "yggdrasil.jpg" }) { ...fluidImage }
-      zephyr: file(relativePath: { eq: "zephyr.jpg" }) { ...fluidImage }
+      karai: file(relativePath: { eq: "karai.jpg" }) {
+        ...fluidImage
+      }
+      minima: file(relativePath: { eq: "minima.jpg" }) {
+        ...fluidImage
+      }
+      threeTakesOrLess: file(relativePath: { eq: "3tl.jpg" }) {
+        ...fluidImage
+      }
+      workflows: file(relativePath: { eq: "workflows.jpg" }) {
+        ...fluidImage
+      }
+      yggdrasil: file(relativePath: { eq: "yggdrasil.jpg" }) {
+        ...fluidImage
+      }
+      zephyr: file(relativePath: { eq: "zephyr.jpg" }) {
+        ...fluidImage
+      }
     }
   `);
 
-  const { cryptoB, kachingu, karai, minima, politik, threeTakesOrLess, yggdrasil, zephyr } = data;
+  const {
+    karai,
+    minima,
+    threeTakesOrLess,
+    workflows,
+    yggdrasil,
+    zephyr,
+  } = data;
   const projectsData = [
     {
-      title: "Yggdrasil (WIP)",
-      imageFluid: yggdrasil.childImageSharp.fluid,
-      description: "Full-stack web app to help learners study better. Core features: notes, flashcards, concepts, Pomodoro timer.",
-      url: "https://yggapp.com",
-      technologies: ["React", "Express", "Postgres", "Docker"]
+      title: "Workflows (WIP)",
+      imageFluid: workflows.childImageSharp.fluid,
+      description: "Workflows to help you learn and study better.",
+      url: "https://ygg-workflows.netlify.app",
+      technologies: ["React", "Chakra UI"],
     },
     {
-      title: "minima (WIP)",
+      title: "Notebooks",
+      imageFluid: yggdrasil.childImageSharp.fluid,
+      description:
+        "Full-stack web app for notetaking and studying. Core features include notes, flashcards, concepts, Pomodoro timer.",
+      url: "https://ygg-notebooks.herokuapp.com",
+      technologies: ["React", "Express", "Postgres", "Docker"],
+    },
+    {
+      title: "minima",
       imageFluid: minima.childImageSharp.fluid,
-      description: "Minimal, personal front-end web app built using the YouTube Data API. Users can save videos, channels, and playlists.",
+      description:
+        "Minimal, personal front-end web app built using the YouTube Data API. Users can save videos, channels, and playlists.",
       url: "https://minima-demo.netlify.app",
-      technologies: ["React", "Redux", "Firestore"]
+      technologies: ["React", "Redux", "Firestore"],
     },
     {
       title: "3 Takes or Less",
       imageFluid: threeTakesOrLess.childImageSharp.fluid,
       description: "Website for up-and-coming stunt team based in Edmonton.",
       url: "https://3takesorless.com",
-      technologies: ["React", "Gatsby"]
+      technologies: ["React", "Gatsby"],
     },
     {
       title: "Karai「花蕾」",
       imageFluid: karai.childImageSharp.fluid,
-      description: "Web app for studying. Encourages effective studying through metacognitive prompts.",
+      description:
+        "Web app for studying. Encourages effective studying through metacognitive prompts.",
       url: "https://karai.netlify.app",
-      technologies: ["Vue"]
-    },
-    {
-      title: "Crypto B Vision",
-      imageFluid: cryptoB.childImageSharp.fluid,
-      description: "Website that provides information about investing in cryptocurrency. Built using WordPress and Oxygen Builder.",
-      url: "https://cryptobvision.com",
-      technologies: ["WordPress", "Oxygen Builder"]
-    },
-    {
-      title: "KA-Chingu",
-      imageFluid: kachingu.childImageSharp.fluid,
-      description: "Basic full-stack web app for tracking income and expenses. Built with other team members for chingu.io voyage 8.",
-      url: "https://ka-chingu.herokuapp.com",
-      technologies: ["React", "Redux", "Express", "Postgres"]
+      technologies: ["Vue"],
     },
     {
       title: "Zephyr",
       imageFluid: zephyr.childImageSharp.fluid,
       description: "First iteration of my personal website.",
       url: "https://tamxle.com/zephyr",
-      technologies: ["HTML", "SCSS", "JavaScript"]
-    },
-    {
-      title: "Politik™",
-      imageFluid: politik.childImageSharp.fluid,
-      description: "Website for Politik™, a social organization.",
-      url: "https://politik.ca",
-      technologies: ["HTML", "SCSS", "WordPress"]
+      technologies: ["HTML", "SCSS", "JavaScript"],
     },
   ];
 
@@ -84,8 +90,8 @@ const Feature = () => {
         <SectionHeader color="red">Featured</SectionHeader>
       </div>
       <div className="c-feature__projects">
-        {
-          projectsData.map(({ description, imageFluid, url, technologies, title }, idx) => (
+        {projectsData.map(
+          ({ description, imageFluid, url, technologies, title }, idx) => (
             <FeatureProject
               key={title}
               idx={idx}
@@ -95,11 +101,11 @@ const Feature = () => {
               technologies={technologies}
               title={title}
             />
-          ))
-        }
+          )
+        )}
       </div>
     </section>
   );
- };
+};
 
 export default Feature;

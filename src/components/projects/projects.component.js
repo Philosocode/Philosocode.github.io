@@ -7,83 +7,102 @@ import SectionHeader from "../shared/section-header.component";
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      auetchiu: file(relativePath: { eq: "auetchiu.jpg" }) { ...fluidImage }
-      bakboardz: file(relativePath: { eq: "bakboardz.jpg" }) { ...fluidImage }
-      interzone: file(relativePath: { eq: "interzone.jpg" }) { ...fluidImage }
-      fraser: file(relativePath: { eq: "fraser.jpg" }) { ...fluidImage }
-      lilac: file(relativePath: { eq: "lilac.jpg" }) { ...fluidImage }
-      philosocode: file(relativePath: { eq: "philosocode.jpg" }) { ...fluidImage }
-      yggX: file(relativePath: { eq: "yggx.jpg" }) { ...fluidImage }
+      bakboardz: file(relativePath: { eq: "bakboardz.jpg" }) {
+        ...fluidImage
+      }
+      cryptoB: file(relativePath: { eq: "cryptob.jpg" }) {
+        ...fluidImage
+      }
+      fraser: file(relativePath: { eq: "fraser.jpg" }) {
+        ...fluidImage
+      }
+      lilac: file(relativePath: { eq: "lilac.jpg" }) {
+        ...fluidImage
+      }
+      philosocode: file(relativePath: { eq: "philosocode.jpg" }) {
+        ...fluidImage
+      }
+      yggX: file(relativePath: { eq: "yggx.jpg" }) {
+        ...fluidImage
+      }
     }
   `);
 
-  const { auetchiu, bakboardz, fraser, interzone, lilac, philosocode, yggX } = data;
+  const {
+    bakboardz,
+    cryptoB,
+    fraser,
+    lilac,
+    philosocode,
+    yggX,
+  } = data;
   const projectsData = [
     {
-      title: "auetchiu.com",
-      imageFluid: auetchiu.childImageSharp.fluid,
-      description: "Website for local import export company. Built using Gatsby & Contentful CMS.",
-      url: "https://auetchiu.netlify.app"
+      title: "Crypto B Vision",
+      imageFluid: cryptoB.childImageSharp.fluid,
+      description:
+        "Website that provides information about investing in cryptocurrency.",
+      url: "https://cryptobvision.com",
+      technologies: ["WordPress", "Oxygen Builder"],
     },
     {
       title: "Bakboardz.ca",
       imageFluid: bakboardz.childImageSharp.fluid,
-      description: "Website for local company specializing in basketball backboard services. Built using Gatsby, Tailwind CSS, & Contentful CMS.",
-      url: "https://bakboardz.ca"
+      description:
+        "Website for local company specializing in basketball backboard services. Built using Gatsby, Tailwind CSS, & Contentful CMS.",
+      url: "https://bakboardz.ca",
     },
     {
       title: "Child Care Center Site",
       imageFluid: fraser.childImageSharp.fluid,
-      description: "Website for Fraser Community Child Care Center & Out of School Care. Built using Gatsby & Contentful CMS.",
-      url: "https://frasercommunitychildcarecenter.com"
-    },
-    {
-      title: "Interzone™ Event",
-      imageFluid: interzone.childImageSharp.fluid,
-      description: "Website for upcoming event hosted by Politik™. Built using WordPress.",
-      url: "https://interzone.politik.ca"
+      description:
+        "Website for Fraser Community Child Care Center & Out of School Care. Built using Gatsby & Contentful CMS.",
+      url: "https://frasercommunitychildcarecenter.com",
     },
     {
       title: "Yggdrasil Prototype",
       imageFluid: yggX.childImageSharp.fluid,
-      description: "Tool to help students and lifelong learners optimize their studying.",
-      url: "https://yggx.netlify.app"
+      description:
+        "Tool to help students and lifelong learners optimize their studying.",
+      url: "https://yggx.netlify.app",
     },
     {
-      title: "Philosocode",
+      title: "Philosocode Blog",
       imageFluid: philosocode.childImageSharp.fluid,
-      description: "Programming blog where I post computer science & web development tutorials.",
-      url: "https://philosocode.netlify.app"
+      description:
+        "Programming blog where I post computer science & web development tutorials.",
+      url: "https://philosocode.netlify.app",
     },
     {
       title: "Lilac",
       imageFluid: lilac.childImageSharp.fluid,
-      description: "Simple landing page and writing app. Built for a 48 hour interview take-home project.",
-      url: "https://tamxle.com/lilac"
+      description:
+        "Simple landing page and writing app. Built for a 48 hour interview take-home project.",
+      url: "https://tamxle.com/lilac",
     },
   ];
 
   return (
     <section className="o-grid o-section o-section--dark" id="projects">
       <div className="o-grid__item o-grid__item--center">
-        <SectionHeader color="grey" alignment="left">Projects</SectionHeader>
+        <SectionHeader color="grey" alignment="left">
+          Projects
+        </SectionHeader>
       </div>
       <div className="c-project__grid">
-        {
-          projectsData.map(({ description, imageFluid, title, url }, idx) => (
-            <ProjectBox
-              key={title}
-              description={description}
-              idx={idx}
-              imageFluid={imageFluid}
-              title={title}
-              url={url}
-            />
-          ))
-        }
+        {projectsData.map(({ description, imageFluid, title, url }, idx) => (
+          <ProjectBox
+            key={title}
+            description={description}
+            idx={idx}
+            imageFluid={imageFluid}
+            title={title}
+            url={url}
+          />
+        ))}
       </div>
     </section>
   );
-}
+};
 
 export default Projects;
