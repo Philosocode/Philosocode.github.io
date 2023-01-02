@@ -37,21 +37,21 @@ const Projects = () => {
     yggX,
   } = data;
   const projectsData = [
-    {
-      title: "Crypto B Vision",
-      imageFluid: cryptoB.childImageSharp.fluid,
-      description:
-        "Website that provides information about investing in cryptocurrency.",
-      url: "https://cryptobvision.com",
-      technologies: ["WordPress", "Oxygen Builder"],
-    },
-    {
-      title: "Bakboardz.ca",
-      imageFluid: bakboardz.childImageSharp.fluid,
-      description:
-        "Website for local company specializing in basketball backboard services. Built using Gatsby, Tailwind CSS, & Contentful CMS.",
-      url: "https://bakboardz.ca",
-    },
+    // {
+    //   title: "Crypto B Vision",
+    //   imageFluid: cryptoB.childImageSharp.fluid,
+    //   description:
+    //     "Website that provides information about investing in cryptocurrency.",
+    //   url: "https://cryptobvision.com",
+    //   technologies: ["WordPress", "Oxygen Builder"],
+    // },
+    // {
+    //   title: "Bakboardz.ca",
+    //   imageFluid: bakboardz.childImageSharp.fluid,
+    //   description:
+    //     "Website for local company specializing in basketball backboard services. Built using Gatsby, Tailwind CSS, & Contentful CMS.",
+    //   url: "https://bakboardz.ca",
+    // },
     {
       title: "Child Care Center Site",
       imageFluid: fraser.childImageSharp.fluid,
@@ -66,13 +66,13 @@ const Projects = () => {
         "Tool to help students and lifelong learners optimize their studying.",
       url: "https://yggx.netlify.app",
     },
-    {
-      title: "Philosocode Blog",
-      imageFluid: philosocode.childImageSharp.fluid,
-      description:
-        "Programming blog where I post computer science & web development tutorials.",
-      url: "https://philosocode.netlify.app",
-    },
+    // {
+    //   title: "Philosocode Blog",
+    //   imageFluid: philosocode.childImageSharp.fluid,
+    //   description:
+    //     "Programming blog where I post computer science & web development tutorials.",
+    //   url: "https://philosocode.netlify.app",
+    // },
     {
       title: "Lilac",
       imageFluid: lilac.childImageSharp.fluid,

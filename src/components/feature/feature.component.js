@@ -38,7 +38,7 @@ const Feature = () => {
   } = data;
   const projectsData = [
     {
-      title: "Workflows (WIP)",
+      title: "Workflows",
       imageFluid: workflows.childImageSharp.fluid,
       description: "Workflows to help you learn and study better.",
       url: "https://ygg-workflows.netlify.app",
@@ -60,13 +60,13 @@ const Feature = () => {
       url: "https://minima-demo.netlify.app",
       technologies: ["React", "Redux", "Firestore"],
     },
-    {
-      title: "3 Takes or Less",
-      imageFluid: threeTakesOrLess.childImageSharp.fluid,
-      description: "Website for up-and-coming stunt team based in Edmonton.",
-      url: "https://3takesorless.com",
-      technologies: ["React", "Gatsby"],
-    },
+    // {
+    //   title: "3 Takes or Less",
+    //   imageFluid: threeTakesOrLess.childImageSharp.fluid,
+    //   description: "Website for up-and-coming stunt team based in Edmonton.",
+    //   url: "https://3takesorless.com",
+    //   technologies: ["React", "Gatsby"],
+    // },
     {
       title: "Karai「花蕾」",
       imageFluid: karai.childImageSharp.fluid,
